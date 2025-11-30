@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Samandar Rahmatov — Portfolio</title>
+  <style>
+    :root{--accent:#0066ff;--muted:#6b7280;--bg:#0f1724;--card:#0b1220}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Arial;background:linear-gradient(180deg,#f7fbff, #eef6ff);color:#0b1220}
+    .container{max-width:980px;margin:40px auto;padding:24px}
+    header{display:flex;gap:20px;align-items:center}
+    .avatar{width:140px;height:140px;border-radius:16px;overflow:hidden;flex:0 0 140px;box-shadow:0 8px 20px rgba(6,30,60,0.12)}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    h1{margin:0;font-size:28px}
+    .subtitle{color:var(--muted);margin-top:6px}
+    .about{margin-top:18px;background:#fff;padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(11,18,32,0.04)}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:18px}
+    .card{background:#fff;padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(11,18,32,0.04)}
+    ul.skills{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+    ul.skills li{background:#f1f5f9;padding:8px 12px;border-radius:999px;font-weight:600;color:#0b1220}
+    .projects a{display:block;padding:12px;border-radius:10px;margin-bottom:10px;text-decoration:none;background:#f8fafc;border:1px solid #eef2f7;color:#0b1220}
+    .contact p{margin:6px 0;color:var(--muted)}
+    footer{margin-top:28px;text-align:center;color:var(--muted)}
+    /* responsive */
+    @media (max-width:900px){.grid{grid-template-columns:1fr}.avatar{width:110px;height:110px;flex:0 0 110px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar">
+        <!-- Replace the src below with the uploaded image filename on your hosting if needed -->
+        <img src="photo_2025-12-01_01-33-02.jpg" alt="Samandar Rahmatov">
+      </div>
+      <div>
+        <h1>Samandar Rahmatov Baxtiyor O'g'li</h1>
+        <div class="subtitle">Dasturchi • Data analitika • Python Coder</div>
+        <div class="subtitle" style="margin-top:8px;font-size:14px;color:#374151">Andijon, 2007 · Hozir: Toshkent — Najot ta'lim (Data analitika)</div>
+      </div>
+    </header>
+
+    <section class="about card">
+      <h2>Men haqimda</h2>
+      <p>Men Rahmatov Samandar, 2007-yil 25-iyulda Andijon viloyati, Izboskan tumanida tug‘ilganman. Hozirda Toshkent shahri, Chilonzor tumanida "Najot ta'lim" o'quv markazida Data analitika bo‘yicha tahsil olaman. Maqsadim — Python va ma'lumotlar bilan ishlash orqali real dunyo muammolarini yechish.</p>
+    </section>
+
+    <div class="grid">
+      <div>
+        <div class="card">
+          <h3>Skillar</h3>
+          <ul class="skills">
+            <li>C</li>
+            <li>Python</li>
+            <li>HTML</li>
+            <li>Data Analitika</li>
+          </ul>
+        </div>
+
+        <div class="card projects" style="margin-top:12px">
+          <h3>Loyihalar</h3>
+          <a href="#" onclick="showProject('Calculator app')">Calculator app — oddiy kalkulyator</a>
+          <a href="#" onclick="showProject('Portfolio website')">Portfolio website — bu saytdosh</a>
+          <a href="#" onclick="showProject('To-do app')">To-do app — vazifalarni boshqarish</a>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card contact">
+          <h3>Kontaktlar</h3>
+          <p><strong>Email:</strong> samandarraxmatov725@gmail.com</p>
+          <p><strong>Telefon:</strong> +998 88 815 2211</p>
+          <p><strong>Telegram:</strong> @rakhmat0vv_17</p>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h3>Qisqacha</h3>
+          <p style="color:var(--muted);font-size:14px">Tajriba orttirish, malaka oshirish va real loyihalarda qatnashish maqsadida faol o‘rganmoqdaman.</p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      © <span id="year"></span> Samandar Rahmatov — Portfolio
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function showProject(name){
+      alert(name + " loyihasi haqida batafsil ma'lumotni hozircha qo'shmagansiz. Agar xohlasangiz men sahifaga loyihalarning tasvirlari va havolalarini ham qo'shib beraman.");
+    }
+  </script>
+</body>
+</html>
